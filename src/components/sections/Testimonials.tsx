@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { testimonials } from "../../data/programs";
+import { testimonials } from "../../data/testimonials";
 
 const WHATSAPP_LINK =
   "https://chat.whatsapp.com/KxbLoI3YCo40TEsNFB24rc?mode=wwt";

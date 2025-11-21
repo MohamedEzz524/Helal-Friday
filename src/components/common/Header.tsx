@@ -71,9 +71,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-md transition-all duration-300">
       <div className="container-padding py-3 md:py-4 flex flex-row items-start md:items-center justify-between gap-3 md:gap-0">
-        <div className="text-xs md:text-sm font-medium leading-tight">
+        <div className="text-xs md:text-sm lg:text-base font-medium leading-tight">
           THIS OFFER WILL BE AVAILABLE FOR{" "}
-          <span className="font-mono text-[#df1124] whitespace-nowrap">
+          <span className="text-[#df1124] whitespace-nowrap">
             {timeLeft.days} {timeLeft.days === 1 ? "DAY" : "DAYS"} LEFT
           </span>{" "}
           IN:

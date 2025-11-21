@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { faqs } from "../../data/programs";
+import { faqs } from "../../data/faqs";
 
 export default function FAQ() {
   // Split FAQs into two arrays
