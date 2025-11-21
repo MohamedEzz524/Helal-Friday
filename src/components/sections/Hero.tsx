@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="blur-accent-left top-[-200px] left-[-200px]" />
       <div className="blur-accent-right top-[-100px] right-[-200px]" />
 
-      <div className="container-padding relative z-10 text-center pb-64">
+      <div className="container-padding relative z-10 text-center pb-20">
         {/* Hero Image */}
         <div className="mb-8 flex justify-center">
           <img
@@ -66,9 +66,9 @@ export default function Hero() {
 
         {/* 3D Rectangles */}
       </div>
-      <div className="absolute inset-0 pointer-events-none flex items-end justify-center">
+      <div className="absolute inset-0 pointer-events-none z-0 flex items-end justify-center">
         {/* SVG wave separator */}
-        <div className="absolute bottom-0 left-0 right-0 z-20">
+        <div className="absolute bottom-0 left-0 right-0">
           <img
             src="https://ext.same-assets.com/1874618372/2827580057.svg"
             alt=""
