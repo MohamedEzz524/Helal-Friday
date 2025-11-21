@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const WHATSAPP_LINK =
-  "https://chat.whatsapp.com/LxUkHkmslyH5MLqdXjyC7B?mode=wwt";
+  "https://chat.whatsapp.com/KxbLoI3YCo40TEsNFB24rc?mode=wwt";
 
 // Target date: Thursday, November 28, at 12:01 PM
 const TARGET_DATE = new Date("2025-11-28T12:01:00");
@@ -23,6 +23,18 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Set header height for spacing
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (header) {
+      const height = header.offsetHeight;
+      document.documentElement.style.setProperty(
+        "--header-height",
+        `${height}px`
+      );
+    }
+  }, [timeLeft]);
 
   useEffect(() => {
     const updateTimer = () => {
@@ -57,15 +69,11 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/60 backdrop-blur-md" : "bg-transparent"
-      }`}
-    >
-      <div className="container-padding py-4 flex items-center justify-between">
-        <div className="text-sm font-medium">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-md transition-all duration-300">
+      <div className="container-padding py-3 md:py-4 flex flex-row items-start md:items-center justify-between gap-3 md:gap-0">
+        <div className="text-xs md:text-sm font-medium leading-tight">
           THIS OFFER WILL BE AVAILABLE FOR{" "}
-          <span className="font-mono text-[#df1124]">
+          <span className="font-mono text-[#df1124] whitespace-nowrap">
             {timeLeft.days} {timeLeft.days === 1 ? "DAY" : "DAYS"} LEFT
           </span>{" "}
           IN:
@@ -78,9 +86,9 @@ export default function Header() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-r from-[#df1124] to-[#f03d4e] text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          className="bg-gradient-to-r from-[#df1124] to-[#f03d4e] text-white px-4 md:px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity whitespace-nowrap text-sm md:text-base flex-shrink-0"
         >
-          JOIN THE GROUP
+          <span className="block md:inline">JOIN THE GROUP</span>
         </a>
       </div>
       <div className="h-[2px] bg-gradient-to-r from-transparent via-[#df1124] to-transparent opacity-50" />

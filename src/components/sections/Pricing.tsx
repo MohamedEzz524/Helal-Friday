@@ -1,5 +1,5 @@
 const WHATSAPP_LINK =
-  "https://chat.whatsapp.com/LxUkHkmslyH5MLqdXjyC7B?mode=wwt";
+  "https://chat.whatsapp.com/KxbLoI3YCo40TEsNFB24rc?mode=wwt";
 
 export default function Pricing() {
   return (
@@ -71,7 +71,7 @@ export default function Pricing() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-gradient-to-r from-[#df1124] to-[#f03d4e] text-white text-lg font-bold px-10 py-4 rounded-xl hover:opacity-90 transition-opacity text-center shadow-lg shadow-[#df1124]/30"
+              className="block w-full bg-gradient-to-r from-[#df1124] to-[#f03d4e] text-white text-sm md:text-lg font-bold px-6 md:px-10 py-2.5 md:py-4 rounded-xl hover:opacity-90 transition-opacity text-center shadow-lg shadow-[#df1124]/30"
             >
               JOIN THE WHATSAPP GROUP
             </a>
